@@ -6,9 +6,12 @@ python:
   - 3.9
 
 services:
-  postgresql
+  - postgresql
 addons:
-  postgresql: "12.7"
+  apt:
+    packages:
+      - postgresql-12
+      - postgresql-client-12
 
 env:
   global:
