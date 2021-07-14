@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Python Pro</title>
+
+    <meta name="description" content="Pagina PythonPro-Ismael Miranda">
+    <meta name="author" content="Ismael Miranda">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'base:home' %}">Python Pro</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="jumbotron">
+                <h2>
+                    Curso de Python com Henrique Bastos!
+                </h2>
+                <p>
+                    <a href="https://henriquebastos.net/" target="_blank">Henrique Bastos</a> é instrutor, palestrante,
+                    desenvolvedor e consultor com experiência internacional.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <h5 class="card-header">
+                            Mais detalhes sobre o instrutor
+                        </h5>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <img class="img-thumbnail float-left mr-2 ml-2"
+                                     src="{% static 'img/henrique_bastos.jpeg' %}"
+                                     alt="Foto do Henrique Bastos">
+                                Apaixonado por programação há mais de 20 anos, é especialista em Python, Django e
+                                Métodos Ágeis, membro da Django Software Foundation e da Python Software Foundation.
+
+                                Hoje, se orgulha de já ter capacitado mais de 5 mil programadores e se concentra em
+                                compartilhar uma melhor forma de programar para ajudar as pessoas a terem mais autonomia
+                                em suas vidas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="main-footer mt-4 pt-4 text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Entre em contato</h3>
+                <address>
+                    +55 11 999-888-777
+                    <br/>
+                    <a href="mailto:python@python.com" class="text-light">python@python.com</a>
+                </address>
+
+            </div>
+        </div>
+    </div>
+    <div class="rights p-1">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    {% now 'Y' %} Python. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
