@@ -7,7 +7,7 @@ def listar_modulos_ordenados() -> List[Modulo]:
     Lista modulos ordenados por titulo
     :return:
     """
-    return list(Modulo.objects.order_by('order').all())
+    return list(Modulo.objects.order_by('titulo').all())
 
 
 def encontrar_modulo(slug) -> Modulo:
