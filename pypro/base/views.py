@@ -1,4 +1,3 @@
-# from django.http import HttpResponse
 from pypro.modulos import facade
 from django.shortcuts import render
 
