@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Python Pro - Aperitvo{% endblock title %}
+{% block description %}Página com video Gratuito de Python{% endblock description %}
+
+{% block body %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{aula.modulo.get_absolute_url}}">{{ aula.modulo.titulo }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ aula.titulo }}</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="mt-3">{{ aula.titulo | default:'Faltando Titulo' }}</h1>
+                <iframe src="https://player.vimeo.com/video/{{ aula.vimeo_id }}" width="640" height="564" frameborder="0"
+                        allow="autoplay; fullscreen" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}
